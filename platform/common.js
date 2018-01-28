@@ -251,8 +251,8 @@ export async function main(library, logger, invocation) {
 
 	try {
 		await downloadFile(sourceLocation);
-		await checkM3u(download);
-		await ffprobe();
+		// await checkM3u(download);
+		// await ffprobe();
 		await ffmpeg(keyPrefix);
 		await Promise.all([
 			removeFile(download),
