@@ -8,3 +8,4 @@ dist.zip
 keyfile.json
 npm-debug.log
 .nvmrc
+*.env
