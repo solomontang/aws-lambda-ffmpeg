@@ -9,3 +9,4 @@ keyfile.json
 npm-debug.log
 .nvmrc
 *.env
+*.sh
