@@ -1,8 +1,8 @@
 {
-  "name": "aws-lambda-ffmpeg",
+  "name": "aws-lambda-ffmpeg-discboard",
   "version": "3.2.0",
   "private": true,
-  "description": "AWS Lambda function to resize video and generate a thumbnail",
+  "description": "AWS Lambda function to transcode audio to pcm with 48000 sample rate",
   "engines": {
     "node": ">=6.10",
     "npm": ">=3"
@@ -43,9 +43,6 @@
     "gulp-zip": "^4.0.0",
     "run-sequence": "^2.0.0",
     "simple-git": "^1.73.0"
-  },
-  "dependencies": {
-    "dotenv": "^4.0.0"
   },
   "babel": {
     "presets": [

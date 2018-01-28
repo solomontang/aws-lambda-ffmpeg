@@ -24,7 +24,8 @@ const {
 	VIDEO_MAX_DURATION,
 	EXECUTION_ROLE_ARN,
 	CI,
-	CLOUDFORMATION_ROLE_ARN,
+  CLOUDFORMATION_ROLE_ARN,
+  AWS_REGION
 } = process.env;
 
 const s3Prefix = CFN_S3_PREFIX || packageInfo.name;
@@ -281,7 +282,10 @@ module.exports = function(gulp, prefix) {
 
 	gulp.task(`${prefix}:create-cfn-bucket`, () => s3
 		.createBucket({
-			Bucket
+      Bucket,
+      CreateBucketConfiguration: {
+        LocationConstraint: AWS_REGION
+      }
 		})
 		.promise()
 		.catch(console.error)
